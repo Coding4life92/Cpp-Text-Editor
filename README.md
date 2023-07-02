@@ -1,7 +1,7 @@
 # Cpp-Text-Editor
 A text editor for text files written in C++.
 
-Functionality: 
+# Functionality: 
   - Gets user input for text to be inserted
   - Gets user input to delete a word that is searched for
   - Saves to a file, displays a progress bar, then exits the terminal

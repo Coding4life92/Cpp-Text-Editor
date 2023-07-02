@@ -4,7 +4,9 @@ A text editor for text files written in C++.
 # Functionality
   - Gets user input for text to be inserted
   - Gets user input to delete a word that is searched for
-  - Saves to a file, displays a progress bar, then exits the terminal
+  - Displays a progress bar before writing to the file
+  - Saves to the file (txt file in this case)
+  - Then exits the terminal
 
 # Result of the code
 <img width="485" alt="Screen Shot 2023-07-02 at 12 40 28 PM" src="https://github.com/Coding4life92/Cpp-Text-Editor/assets/50407744/54980f81-6c19-4df3-bdb5-66df2567b285">

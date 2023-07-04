@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include <fstream>
+#include <sstream>
 #include <chrono>
 #include <thread>
 
@@ -129,7 +131,15 @@ void Editor::displayContent()
   std::cout << "-------------------------------\n";
 
   std::cout << "\033[1;37mContent:\n";
-  std::cout << m_content << "\n";
+  // std::cout << m_content << "\n";
+  std::istringstream contentStream(m_content);
+  std::string line;
+  size_t lineNumber = 1;
+  while (std::getline(contentStream, line))
+  {
+    std::cout << "\033[1;33m" << lineNumber << ": \033[0m" << line << "\n";
+    lineNumber++;
+  }
 
   // Display the options menu
   std::cout << "\033[1;37m---------------------\n";
@@ -144,7 +154,7 @@ void Editor::displayContent()
 void Editor::insertText()
 {
   std::string text = getUserInput();
-  m_content += text;
+  m_content += text + "\n";
 }
 
 void Editor::deleteText()
